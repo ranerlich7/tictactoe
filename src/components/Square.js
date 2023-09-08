@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-function Square({ value }) {
+function Square({ value, onSquareClick }) {
   // the component html
   return (
     <>
-      <button className="square">{value}</button>
+      <button onClick={onSquareClick} className="square">
+        {value}
+      </button>
     </>
   );
 }
