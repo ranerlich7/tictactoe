@@ -4,10 +4,11 @@ import "./styles.css";
 function App() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
-  function handleClick(index) {
-    console.log("click!!!", index);
+  function handleClick(i) {
+    const nextSquares = squares.slice(); //copy the array
+    nextSquares[i] = "X";
+    setSquares(nextSquares);
   }
-
   return (
     <>
       <div className="board-row">
